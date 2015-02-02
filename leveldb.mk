@@ -37,7 +37,7 @@ LIBRECOSET_LEVELDB_SOURCES := \
 	./util/options.cc \
 	./util/status.cc
 
-$(eval $(call set_compile_option,$(LIBRECOSET_LEVELDB_SOURCES),-Ileveldb -DOS_LINUX -DPLATFORM=OS_LINUX -DSNAPPY=1 -DLEVELDB_PLATFORM_POSIX))
+$(eval $(call set_compile_option,$(LIBRECOSET_LEVELDB_SOURCES),-Ileveldb -DOS_LINUX -DPLATFORM=OS_LINUX -DSNAPPY=1 -DLEVELDB_PLATFORM_POSIX -Wno-unused-function))
 
 LIBRECOSET_LEVELDB_LINK := snappy
 
